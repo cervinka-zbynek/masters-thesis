@@ -1,0 +1,54 @@
+body {
+	padding-top: 12px;
+}
+
+.main-section .section-header {
+	font-size: 18px;
+}
+
+.main-section input[type='checkbox'] {
+	width: 16px;
+	height: 16px;
+}
+
+.subsection {
+	margin-left: 27px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+/* text color in sunsection*/
+.subsection, .subsection input, .subsection select {
+	color: rgba(75, 75, 75, 1);
+}
+
+.subsection .row {
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.subsection .row input, .subsection .row select {
+	height: 20px;
+}
+
+.subsection .row select {
+	width: 225px;
+}
+
+.subsection .row select.long-select {
+	width: 453px;
+}
+
+.subsection .row .table-left-column {
+	display: inline-block;
+	width: 225px;
+}
+
+.save-button {
+	font-size: 18px;
+	padding: 7px 15px 7px 15px;
+	margin-left: 5px;
+	margin-top: 35px;
+	cursor: pointer;
+}

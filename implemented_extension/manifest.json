@@ -1,0 +1,31 @@
+{
+  "background": {
+      "scripts": ["background.js"]
+  },
+  "browser_action": {
+      "default_title": "JavaScript Restricter"
+  },
+  "description": "JavaScript Restricter",
+  "homepage_url": "https://www.fit.vutbr.cz",
+  "manifest_version": 2,
+  "name": "JavaScript Restricter",
+  "options_ui": {
+      "page": "options.html",
+      "browser_style": true
+  },
+  "permissions": ["storage"],
+  "version": "1.0",
+  "applications": {
+      "gecko": {
+          "id": "xxx@xxx",
+          "strict_min_version": "57.0a1"
+      }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["document_start.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

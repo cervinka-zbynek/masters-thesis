@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="options.css">
+</head>
+<body>
+  <form>
+      <!-- DATE -->
+      <div class="main-section">
+        <input type="checkbox" id="window_date_main_checkbox">
+        <span class="section-header">Snížit přesnost času dle následujícího parametru:</span>
+      </div>
+      <div class="subsection">
+        <div class="row">
+          <span class="table-left-column">Zaokrouhlit poskytovaný čas:</span>
+          <select id="window_date_time_round_precision">
+            <option value="-1">na desítky milisekund</option>
+            <option value="-2" selected>na stovky milisekund</option>
+            <option value="-3">na sekundy</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- PERFORMANCE -->
+      <div class="main-section">
+        <input type="checkbox" id="performance_now_main_checkbox">
+        <span class="section-header">Snížit přesnost "performance.now()" dat dle následujícho parametru:</span>
+      </div>
+      <div class="subsection">
+        <div class="row">
+          <span class="table-left-column">Zaokrouhlit poskytovanou hodnotu:</span>
+          <select id="performance_now_value_round_precision">
+            <option value="0">na jednotky</option>
+            <option value="-1">na desítky</option>
+            <option value="-2" selected>na stovky</option>
+            <option value="-3">na tisíce</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- CANVAS -->
+      <div class="main-section">
+        <input type="checkbox" id="htmlcanvaselement_main_checkbox">
+        <span class="section-header">Filtrovat zápis do canvasu dle následujícího parametru:</span>
+      </div>
+      <div class="subsection">
+        <div class="row">
+          <select id="htmlcanvaselement_type_of_restriction" class="long-select">
+            <option value="a" selected>U každého pokusu o zápis do canvasu se dotázat uživatele</option>
+            <option value="b">Blokovat všechny pokusy o zápis do canvasu</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- GPS -->
+      <div class="main-section">
+        <input type="checkbox" id="navigator_geolocation_main_checkbox">
+        <span class="section-header">Snížit přesnost GPS dat dle následujících parametrů:</span>
+      </div>
+      <div class="subsection">
+        <div class="row">
+          <select id="navigator_geolocation_type_of_restriction" class="long-select">
+            <option value="a" selected>Zaokrouhlit polohové informace</option>
+            <option value="b">Vynulovat všechny polohové informace</option>
+          </select>
+        </div>
+        <div class="row">
+          <span class="table-left-column">Zeměpisná šířka:</span>
+          <select id="navigator_geolocation_rounding_precision_of_item_a">
+            <option value="0">na celé číslo</option>
+            <option value="1">na 1 desetinné místo</option>
+            <option value="2">na 2 desetinná místa</option>
+            <option value="3">na 3 desetinná místa</option>
+            <option value="4" selected>na 4 desetinná místa</option>
+            <option value="5">na 5 desetinných míst</option>
+          </select>
+        </div>
+        <div class="row">
+          <span class="table-left-column">Zeměpisná délka:</span>
+          <select id="navigator_geolocation_rounding_precision_of_item_b">
+            <option value="0">na celé číslo</option>
+            <option value="1">na 1 desetinné místo</option>
+            <option value="2">na 2 desetinná místa</option>
+            <option value="3">na 3 desetinná místa</option>
+            <option value="4" selected>na 4 desetinná místa</option>
+            <option value="5">na 5 desetinných míst</option>
+          </select>
+        </div>
+        <div class="row">
+          <span class="table-left-column">Nadmořská výška:</span>
+          <select id="navigator_geolocation_rounding_precision_of_item_c">
+            <option value="0">na celé číslo</option>
+            <option value="-1">na desítky</option>
+            <option value="-2" selected>na stovky</option>
+            <option value="-3">na tisíce</option>
+          </select>
+        </div>
+        <div class="row">
+          <span class="table-left-column">Přesnost:</span>
+          <select id="navigator_geolocation_rounding_precision_of_item_d">
+            <option value="-1">na desítky</option>
+            <option value="-2" selected>na stovky</option>
+            <option value="-3">na tisíce</option>
+          </select>
+        </div>
+        <div class="row">
+          <span class="table-left-column">Přesnost nadmořské výšky:</span>
+          <select id="navigator_geolocation_rounding_precision_of_item_e">
+            <option value="-1">na desítky</option>
+            <option value="-2" selected>na stovky</option>
+            <option value="-3">na tisíce</option>
+          </select>
+        </div>
+        <div class="row">
+          <span class="table-left-column">Heading:</span>
+          <select id="navigator_geolocation_rounding_precision_of_item_f">
+            <option value="-1">na desítky</option>
+            <option value="-2" selected>na stovky</option>
+            <option value="-3">na tisíce</option>
+          </select>
+        </div>
+        <div class="row">
+          <span class="table-left-column">Rychlost:</span>
+          <select id="navigator_geolocation_rounding_precision_of_item_g">
+            <option value="-1">na desítky</option>
+            <option value="-2" selected>na stovky</option>
+            <option value="-3">na tisíce</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- XMLHTTPREQUEST -->
+      <div class="main-section">
+        <input type="checkbox" id="xmlhttprequest_main_checkbox">
+        <span class="section-header">Filtrovat požadavky typu XMLHttpRequest dle následujícího parametru:</span>
+      </div>
+      <div class="subsection">
+        <div class="row">
+          <select id="xmlhttprequest_type_of_restriction" class="long-select">
+            <option value="a" selected>U každého požadavku typu XMLHttpRequest se dotázat uživatele</option>
+            <option value="b">Blokovat všechny požadavky typu XMLHttpRequest</option>
+          </select>
+        </div>
+      </div>
+      
+      <button type="submit" class="save-button">Uložit nastavení</button>
+  </form>
+  <script src="options.js"></script>
+</body>
+</html>
